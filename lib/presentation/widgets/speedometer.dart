@@ -6,7 +6,11 @@ class Speedometer extends StatelessWidget {
   final double speed;
   final double maxSpeed;
 
-  const Speedometer({super.key, required this.speed, this.maxSpeed = 120});
+  const Speedometer({
+    super.key,
+    required this.speed,
+    this.maxSpeed = 120,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,23 +20,27 @@ class Speedometer extends StatelessWidget {
         width: 300,
         height: 300,
         child: Center(
-          child: Text.rich(
-            TextSpan(
-              children: [
+          child: Stack(
+            children: [
+              Text.rich(
                 TextSpan(
-                  text: speed.toStringAsFixed(1),
-                  style: const TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  children: [
+                    TextSpan(
+                      text: speed.toStringAsFixed(1),
+                      style: const TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const TextSpan(text: ' '),
+                    const TextSpan(
+                      text: 'km/h',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
                 ),
-                const TextSpan(text: ' '),
-                const TextSpan(
-                  text: 'km/h',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
