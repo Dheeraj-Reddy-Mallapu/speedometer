@@ -1,25 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'speed_tracker_provider.dart';
+part of 'trips_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$speedTrackerHash() => r'44b8e47fd7887217ba88d9f6f9c1e490d40ccb93';
+String _$tripsHash() => r'a0152f29ad96c0898a4abc99ab55dbbea6c203a2';
 
-/// See also [SpeedTracker].
-@ProviderFor(SpeedTracker)
-final speedTrackerProvider =
-    AutoDisposeNotifierProvider<SpeedTracker, SpeedState>.internal(
-  SpeedTracker.new,
-  name: r'speedTrackerProvider',
+/// See also [Trips].
+@ProviderFor(Trips)
+final tripsProvider = AutoDisposeNotifierProvider<Trips, List<Trip>>.internal(
+  Trips.new,
+  name: r'tripsProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$speedTrackerHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$tripsHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$SpeedTracker = AutoDisposeNotifier<SpeedState>;
+typedef _$Trips = AutoDisposeNotifier<List<Trip>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
